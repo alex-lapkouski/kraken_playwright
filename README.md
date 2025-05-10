@@ -6,6 +6,10 @@
 This solution uses Playwright with Page Object Model for UI automation, Python for scripting, and Docker for containerization. 
 I've also added some API tests just for POC.
 
+**SIDE NOTE:**
+In the assessment it says that _Attempt login with a wrong password → expect HTTP 401 / error message_
+But actually it returns _422_, so the 2 API tests that are failing  - it's expected.
+
 **Prerequisites**
 Before running the tests, ensure the following are installed on your system:
 
