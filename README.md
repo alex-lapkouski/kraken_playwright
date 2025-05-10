@@ -97,3 +97,32 @@ Run the tests in Docker:
 Additional comments:
 1. Added some utilities to help creating new users when running in local env
 2. Added some utilities to help creating new articles when running in local env
+
+
+Assessment checklist:
+- [x] You should develop and test against the application running locally via Docker.
+- [x] Core user journeys – all required 
+Sign-up & Login
+• Register a new user
+• Log in successfully
+• Attempt login with a wrong password → expect HTTP 401 / error message
+Done via API tests
+- [x] Write Article
+• Logged-in user creates an article (title, body, tags)
+• Article appears in “My Articles” list
+- Follow Feed
+• User A follows User B
+• User B publishes a new article
+• Article shows up in User A’s Your Feed
+- Additional coverage – pick any two 
+- [x] Edit / Delete Article
+• Author can update body & tags, changes are visible
+• Author can delete the article, it disappears from all lists
+- [x] Favourite Toggle
+• Logged-in user favourites / unfavourites an article
+• Favourite counter updates accordingly
+- [x] There must be a README with simple step-by-step instructions for running
+the solution,
+- [x] The solution must be able to run headless on Linux
+- [x] All configuration must be parameterized (URL/domain, username, password,
+etc)
