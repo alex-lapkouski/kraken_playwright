@@ -85,6 +85,7 @@ def test_delete_article(page, app_objects, user):
         article_headers_list.append(article_text)
     assert article["title"] not in article_headers_list
 
+@pytest.mark.favorite_article
 def test_favorite_unfavorite_article(page, app_objects, user):
     article = ArticleGenerator.create_and_publish_article(user["email"], user["password"], app_objects.api_utils)
     app_objects.login_page.user_login(page, user["email"], user["password"])
@@ -93,7 +94,13 @@ def test_favorite_unfavorite_article(page, app_objects, user):
     app_objects.article_page.favorite_article_tab.click()
     expect(page.get_by_text(article["title"])).to_be_visible()
     number_of_articles_before = app_objects.article_page.article_page_header.count()
+    favorite_icon_number_before = app_objects.article_page.favorite_icon_number
+    favorite_number_before = favorite_icon_number_before.text_content().strip()
     app_objects.article_page.favorite_article_button.click()
+    (expect(favorite_icon_number_before).
+     not_to_have_text(favorite_number_before, timeout=2000))
+    favorite_icon_number_after = app_objects.article_page.favorite_icon_number.text_content()
+    assert int(favorite_icon_number_after.strip()) < int(favorite_number_before)
     page.reload()
     expect(page.get_by_text(article["title"])).to_be_hidden()
     number_of_articles_after = app_objects.article_page.article_page_header.count()

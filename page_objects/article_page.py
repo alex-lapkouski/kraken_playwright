@@ -27,6 +27,7 @@ class ArticlePage:
         self.article_tags = page.locator('li[class*="tag"]')
         self.favorite_article_button = page.locator('[class*="preview"] button').first
         self.favorite_article_tab = page.get_by_text('Favorited Articles')
+        self.favorite_icon_number = page.locator('[class*="preview"] button')
 
     def go_to_specific_article_page(self, page, article_name):
         page.goto(f"{BASE_URL}/#/article/{article_name}")
