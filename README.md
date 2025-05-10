@@ -86,7 +86,8 @@ Additional tests cover:
 
 
 
-Docker Configuration
+## **Docker Configuration**
+
 To run the solution in a containerized environment using Docker, follow these steps:
 
 Build the Docker images:
