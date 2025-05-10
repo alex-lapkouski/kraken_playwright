@@ -2,7 +2,8 @@
 Overview**
 
 
-This solution uses Playwright for UI automation, Python for scripting, and Docker for containerization.
+This solution uses Playwright with Page Object Model for UI automation, Python for scripting, and Docker for containerization. 
+I've also added some API tests just for POC.
 
 **Prerequisites**
 Before running the tests, ensure the following are installed on your system:
@@ -17,8 +18,10 @@ pytest: To execute the tests and generate reports.
 
 dotenv: For loading environment variables.
 
-To install dependencies:
-
+Setup:
+1. Clone the repo
+2. Make sure you are in the root directory of the project 
+3. install dependencies:
 
 `pip3 install -r requirements.txt`
 
