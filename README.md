@@ -1,6 +1,6 @@
 # **Senior QA Automation Engineer Practical Assessment
 
-Overview**
+## Overview**
 
 
 This solution uses Playwright with Page Object Model for UI automation, Python for scripting, and Docker for containerization. 
@@ -104,7 +104,7 @@ Additional comments:
 2. Added some utilities to help create new articles when running in local env
 
 
-**Assessment checklist:**
+## **Assessment checklist:**
 - [x] You should develop and test against the application running locally via Docker.
 - [x] Core user journeys – all required 
 Sign-up & Login
