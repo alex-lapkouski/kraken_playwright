@@ -1,4 +1,5 @@
-**Senior QA Automation Engineer Practical Assessment
+# **Senior QA Automation Engineer Practical Assessment
+
 Overview**
 
 
@@ -18,7 +19,7 @@ pytest: To execute the tests and generate reports.
 
 dotenv: For loading environment variables.
 
-Setup:
+**Setup:**
 1. Clone the repo
 2. Make sure you are in the root directory of the project 
 3. install dependencies:
@@ -26,7 +27,7 @@ Setup:
 `pip3 install -r requirements.txt`
 
 
-Environment Setup
+**Environment Setup**
 
 Set up Docker:
 
@@ -35,7 +36,7 @@ Set up Docker:
 
 
 
-Running the Tests
+**Running the Tests**
 
 Run All tests (UI and API) in headless mode
 
@@ -49,7 +50,7 @@ Run a specific test using pytest mark, headed mode
 
 `pytest -v -m edit_article --headless-toggle`
 
-Tests Included
+**Tests Included**
 
 **API**
 
@@ -82,6 +83,9 @@ Additional tests cover:
 2. Favourite Toggle: Favourite/unfavourite an article
 
 
+
+
+
 Docker Configuration
 To run the solution in a containerized environment using Docker, follow these steps:
 
@@ -95,8 +99,8 @@ Run the tests in Docker:
  `docker run --rm playwright-tests`
  
 Additional comments:
-1. Added some utilities to help creating new users when running in local env
-2. Added some utilities to help creating new articles when running in local env
+1. Added some utilities to help create new users when running in local env
+2. Added some utilities to help create new articles when running in local env
 
 
 **Assessment checklist:**
